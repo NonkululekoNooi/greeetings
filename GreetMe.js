@@ -19,10 +19,7 @@ module.exports = function greet(existingNames) {
                     return 'Aa/Ndaa, ' + yourName
                 }
             }
-            else {
-                if(yourName.trim().length < 1) return 'PLEASE ENTER YOUR NAME'
-                return " PLEASE USE ALPHABETS ONLY"
-            }
+          
 
         } else {
             return 'Please enter valid name'

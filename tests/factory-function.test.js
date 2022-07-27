@@ -1,5 +1,5 @@
 const assert = require('assert');
-const myGreeted = require('./GreeMe')
+const myGreeted = require('../GreetMe');
 
 describe("Name is entered with number", function(){
     it("should return an error message",function(){

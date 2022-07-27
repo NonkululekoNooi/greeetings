@@ -24,15 +24,19 @@ app.use(bodyParser.json())
 
  app.post('/greetings',function(req,res){
   
-    greeted.greetingMessage(req.body.enterName,req.body.languages1)
+    greeted.greetingMessage({
+      enterName: req.body.enterName})
 
-   console.log(greeted.greetingMessage(req.body.enterName,req.body.languages1));
+   console.log(greeted.greetingMessage(req.body.enterName));
    res.redirect('/');
 
  });
 
  app.post('/action',function(req,res){
-
+  greeted.greetingMessage(req.body.languages1)
+  
+  console.log(greeted.greetingMessage(req.body.languages1))
+  res.redirect('/');
 });
 
 app.get('/actions',function(req,res){
